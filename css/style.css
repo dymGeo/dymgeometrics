@@ -1,0 +1,58 @@
+h1 { 
+    display: block;
+    font-size: 5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0.67em;
+    margin-right: 0;
+    font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+h2 { 
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.17em;
+    margin-bottom: 0.67em;
+    margin-left: 2.4em;
+    margin-right: 0;
+    font-weight: bold;
+  text-top: 1px;
+  font-family: 'Lato', sans-serif;
+}
+h3 { 
+    display: block;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.67em;
+    margin-left: 5em;
+    margin-right: 0;
+    font-weight: bold;
+  text-top: 0px;
+  font-family: 'Lato', sans-serif;
+}
+p { 
+    display: block;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.67em;
+    margin-left: 6em;
+    margin-right: 0;
+    font-weight: bold;
+  text-top: 0px;
+  font-family: 'Lato', sans-serif;
+}
+#banner{
+
+        position: absolute;
+        width: 25%;
+        height: 150px;
+
+        margin-left: 9em;
+
+  margin-bottom: 9em;
+border: 1px solid #666;
+  background: #fff;
+  -webkit-border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+  font-size: 12px;
+    }

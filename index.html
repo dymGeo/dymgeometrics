@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>An Anonymous Pen on CodePen</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <h1>DymGeometrics 3.0</h1>
+<h2>PascalABC.NET Addon</h2>
+<h3>>Includes</h3>
+<p>>
+ 
+<font color="#151B54">procedure</font> gUpdate(fr,divisionexponent:integer);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  expupdate(fr:integer);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  particle(x,y:integer;force:real;angle:integer;cl:color);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dElip(x,y,l,l2:integer;a,freq:real;cl:color);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dLine(x,y,l:integer;a:real;cl:color;rec:integer);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dSqr(x,y,l:integer;a:real;cl:color);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dTrIs(x,y,l:integer;a,a1:real;cl:color);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dGraphTerm(x,y:integer);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dGraph(x,y:integer;valx,valad:real);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dlCube(x,y,l,d:integer;a,a1:real);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  dlcTest(x,y,l:integer;a,freq:real);
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dSin(a:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dCos(a:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dPer(a,b,c,d:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dArea4(a,b:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dArea3(a,b,c:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dAreas(r:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dLat3(a,b,angle:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   d3(a:real) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dExp(a:real;b:integer) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dFact(a:integer) : real;
+  <br>
+  <br>
+><font color="#DC381F">function</font>   dRoot(a,x:integer) : real;
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  update(fr:integer);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  setBorder(height:integer);
+  <br>
+  <br>
+><font color="#151B54">procedure</font>  clearparts();
+  <br>
+  <br>
+><font color="#DC381F">function</font>  dRandom(x,y:integer):real;
+  
+
+</p>
+<br>
+<h3>>Examples</h3>
+<p>
+  >Particle example (Rain drop) <br><br>
+   <div id="banner">    
+
+
+var i,j:integer;<br>
+n1,n2:integer;<br>
+
+    begin<br>
+    for j:=0 to 25 do begin<br>
+    n1:=random(600);n2:=random(600);<br>
+    for i:=0 to 1000 do<br>
+    particle(n1,n2,1,round(drandom(0,360)),clblack);      <br>
+    expupdate(200);<br>
+    end;<br>
+  
+   </div>
+</p>
+<br><br><br><br><br><br>
+  <br><br>
+
+<p>
+  >Particle example (Rain drop) 
+   <div id="banner">    
+var x,y,a,i:integer;
+    l:integer;
+begin
+l:=60;a:=random(360);
+setwindowsize(400,400);
+dline(200,200,l,a,clBlack,1);
+for i:=0 to 1000 do begin
+dline(ev1,ev2,l,a,clBlack,1);
+sleep(25);
+if ev1>400 then a:=180-a;
+if ev1<0 then a:=180-a;
+
+if ev2>400 then a:=360-a;
+if ev2<0 then a:=360-a;
+redraw;
+end;
+   </div>
+</p>
+  
+  
+
+</body>
+
+</html>
