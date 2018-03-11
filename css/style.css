@@ -44,8 +44,8 @@ p {
 #banner{
 
         position: absolute;
-        width: 25%;
-        height: 150px;
+        width: 65%;
+        
 
         margin-left: 9em;
 
@@ -54,5 +54,10 @@ border: 1px solid #666;
   background: #fff;
   -webkit-border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
-  font-size: 12px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
     }
+
+

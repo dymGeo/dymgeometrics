@@ -15,7 +15,7 @@
 <body>
 
   <h1>DymGeometrics 3.0</h1>
-<h2>PascalABC.NET Addon</h2>
+<h2>PascalABC.NET Addon<br> <a href="https://cdn.discordapp.com/attachments/358613590267396097/422199828181680139/dg3.0.rar">Download</a></h2><br><br>
 <h3>>Includes</h3>
 <p>>
  
@@ -118,30 +118,216 @@ n1,n2:integer;<br>
   
    </div>
 </p>
+
 <br><br><br><br><br><br>
-  <br><br>
+<br><br><br><br><br><br>
 
 <p>
-  >Particle example (Rain drop) 
+  >Line Example (Photon bounce) 
    <div id="banner">    
-var x,y,a,i:integer;
-    l:integer;
-begin
-l:=60;a:=random(360);
-setwindowsize(400,400);
-dline(200,200,l,a,clBlack,1);
-for i:=0 to 1000 do begin
-dline(ev1,ev2,l,a,clBlack,1);
-sleep(25);
-if ev1>400 then a:=180-a;
-if ev1<0 then a:=180-a;
+var x,y,a,i:integer;<br>
+    l:integer;<br>
+begin<br>
+l:=60;a:=random(360);<br>
+setwindowsize(400,400);<br>
+dline(200,200,l,a,clBlack,1);<br>
+for i:=0 to 1000 do begin<br>
+dline(ev1,ev2,l,a,clBlack,1);<br>
+sleep(25);<br>
+if ev1>400 then a:=180-a;<br>
+if ev1<0 then a:=180-a;<br>
 
-if ev2>400 then a:=360-a;
-if ev2<0 then a:=360-a;
-redraw;
-end;
+if ev2>400 then a:=360-a;<br>
+if ev2<0 then a:=360-a;<br>
+redraw;<br>
+end;<br>
    </div>
 </p>
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<p>
+  >Line Example (Photon bounce) 
+   <div id="banner">    
+var x,y,a,i,sa,sl:integer;<br>
+    l,j,ks:integer;<br>
+    rn:integer;<br>
+<br>
+<br>
+begin<br>
+setwindowsize(400,400);<br>
+<br>
+lockdrawing;<br>
+for i:=0 to 360 do begin<br>
+clearwindow(clwhite);<br>
+dsqr(200,200,50,i,clBlack);<br>
+sleep(1);<br>
+redraw<br>
+end;<br>
+<br>
+for i:=0 to 30 do begin<br>
+clearwindow(clwhite);<br>
+dlcube(200,200,50,i,0,0);<br>
+sleep(5);<br>
+redraw;<br>
+end;<br>
+<br>
+for i:=0 to 360 do begin<br>
+clearwindow(clwhite);<br>
+dlcube(200,200,50,30,0,i);<br>
+sleep(5);<br>
+redraw<br>
+end;<br>
+<br>
+<br>
+<br>
+<br>
+for i:=0 to 10000 do begin<br>
+particle(200,200,random(1)+random(10000)/10000+random(10000)/10000+random(10000)/10000,random(360));<br>
+end;<br>
+update(100);<br>
+clearwindow(clwhite);<br>
+UnLockDrawing;<br>
+<br>
+clearparts;<br>
+for i:=0 to 360 do begin<br>
+dElip(200,200,100,100,i,1,clBlack);<br>
+for j:=0 to 20 do particle(lv1,lv2,random(1000)/3000,(-180+random(360)));<br>
+sleep(round(i/30));<br>
+end;<br>
+update(50);<br>
+UnLockDrawing;<br>
+clearparts;<br>
+sleep(500);<br>
+clearwindow(clWhite);<br>
+<br>
+for i:=-150 to 150 do begin<br>
+sleep(5);<br>
+dGraph(200+i,200,cos(i/10)*10,cos((i+1)/10)*10);<br>
+particle(200+i,round(200+cos(i/10)*10),i/100,(-90+random(180))+(-25+random(50)));<br>
+end;<br>
+update(150);<br>
+unlockdrawing;<br>
+sleep(500);<br>
+clearwindow(clWhite);<br>
+for i:=-150 to 150 do begin<br>
+sleep(5);<br>
+dGraph(200+i,200+50,-sqr(-i)/40,-sqr(-1-i)/40);<br>
+end;<br>
+<br>
+sleep(500);<br>
+clearwindow(clWhite);<br>
+<br>
+<br>
+for i:=1 to 360 do begin<br>
+dlctest(200,200,120,round(i),i*1);<br>
+sleep(2);<br>
+end;<br>
+<br>
+<br>
+sleep(500);<br>
+clearwindow(clWhite);<br>
+<br>
+l:=60;a:=random(360);<br>
+setwindowsize(400,400);<br>
+dline(200,200,l,a,clBlack,1);<br>
+for i:=0 to 45 do begin<br>
+dline(ev1,ev2,l,a,clBlack,1);<br>
+sleep(25);<br>
+if ev1>400 then a:=180-a;<br>
+if ev1<0 then a:=180-a;<br>
+<br>
+if ev2>400 then a:=360-a;<br>
+if ev2<0 then a:=360-a;<br>
+redraw;<br>
+clearwindow(clwhite);<br>
+<br>
+<br>
+end;<br>
+lockdrawing();<br>
+//Cerc<br>
+for i:=0 to 360 do begin<br>
+delip(80,90,50,50,i,1,clblack);<br>
+end;<br>
+//Cerc cu spike<br>
+for i:=0 to 360 do begin<br>
+delip(300,90,80+round(sin(i)),80+round(sin(i)),i,1,clblack);<br>
+end;<br>
+for i:=0 to 360 do begin<br>
+delip(300,230,80,30,i,1,clblack);<br>
+end;<br>
+//Functii simple<br>
+dline(20,20,150,-5,clblack,1);<br>
+dSqr(70,180,100,25,clblack);<br>
+dlCube(150,140,40,-10,12,45);<br>
+dTrIs(140,310,90,25,25,clblack);<br>
+unlockdrawing();<br>
+sleep(500);<br>
+clearwindow(clWhite);<br>
+<br>
+x:=200;y:=400;sa:=-90;sl:=80;<br>
+<br>
+for j:=0 to 100 do begin<br>
+x:=200;y:=400;sa:=-90;sl:=80;<br>
+dline(x,y,0,sa,clBlack,1);<br>
+<br>
+for i:=1 to 180 do begin<br>
+dline(ev1,ev2,round(sl/i),0-random(180),clBlack,1);<br>
+<br>
+end;<br>
+end;<br>
+<br>
+clearwindow(clWhite);<br>
+clearparts;<br>
+<br><br>
+unlockdrawing;<br>
+textout(140,200,'DymGeometrics 2.3');<br>
+sleep(500);<br>
+end.<br>
+   </div>
+</p>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br> <!-- br is my city -->
+<h3>>Using dElip procedure</h3>
+<p>The procedure puts two points and one line at <br>
+  > <font color="#151B54">x+round(cos(a)*length1) & y+round(sin(a)*length2)</font> <br>
+  > <font color="#151B54">x+round(cos(a+freq)*length1) & y+round(sin(a+freq)*length2) </font>
+  <br> Then draws a line between those two.
+  <br><br> The frequency by default should be 1, but to generate<br> more advanced figures , it can be changed.
+  <br><br>
+  <font color="#DC381F">Example</font>
+  <br> http://www.lycee-moliere-madrid.org/Sciences/wp-content/uploads/2016/03/31012016-table-200-34-5.8-300x281.jpg
+  <br>
+  <div id="banner">    
+
+
+for i:=1 to 360 do begin<br>
+dlctest(200,200,120,round(i),i*1);<br>
+sleep(2);<br>
+end;<br>
+  
+   </div>
+  <br><br><br><br><br><br><br><br><br><br>
+  <h3>>Particle Example</h3>
+<img src='https://cdn.discordapp.com/attachments/358613590267396097/422178889327050762/ezgif.com-optimize.gif' style='width:30%;height:30%;margin-left: 9em;'></img>
+<br><br>
+<p>Entire project <br>made by Cunev Dimitriy</p>
   
   
 
